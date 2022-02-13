@@ -42,3 +42,9 @@ nav {
   top: 0;
   right: 15px;
 }
+
+.radio-btns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+}

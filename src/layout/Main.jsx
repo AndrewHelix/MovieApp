@@ -12,17 +12,18 @@ class Main extends Component {
       .then((res) => this.setState({ movies: res.Search }));
   }
 
-  searchMovie = (search) => {
-    fetch(`https://www.omdbapi.com/?s=${search}&apikey=4f5d107d`)
+  searchMovie = (search, filter = '') => {
+    if (search === '') return
+    fetch(`https://www.omdbapi.com/?s=${search}&type=${filter}&apikey=4f5d107d`)
       .then((res) => res.json())
-      .then((res) => this.setState({ movies: res.Search }));
+      .then((res) => this.setState({ movies: res.Search}));
   }
 
   render() {
     const { movies } = this.state;
     return (
       <main className="content container">
-        <Search searchMovie={this.searchMovie}/>
+        <Search searchMovie={this.searchMovie} changeFilter={this.changeFilter}/>
         {movies.length ? (
           <Movies movies={movies} />
         ) : (
