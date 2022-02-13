@@ -16,10 +16,6 @@ nav {
   padding: 1.5rem 0;
 }
 
-.card-content {
-  
-}
-
 .movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -39,4 +35,10 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 15px;
 }
