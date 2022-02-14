@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/MovieApp-SimpleReact/static/css/main.8ac4b6e1.css",
-    "main.js": "/MovieApp-SimpleReact/static/js/main.e49b3147.js",
+    "main.js": "/MovieApp-SimpleReact/static/js/main.8b6142ce.js",
     "index.html": "/MovieApp-SimpleReact/index.html",
     "main.8ac4b6e1.css.map": "/MovieApp-SimpleReact/static/css/main.8ac4b6e1.css.map",
-    "main.e49b3147.js.map": "/MovieApp-SimpleReact/static/js/main.e49b3147.js.map"
+    "main.8b6142ce.js.map": "/MovieApp-SimpleReact/static/js/main.8b6142ce.js.map"
   },
   "entrypoints": [
     "static/css/main.8ac4b6e1.css",
-    "static/js/main.e49b3147.js"
+    "static/js/main.8b6142ce.js"
   ]
 }
