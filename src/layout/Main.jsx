@@ -12,7 +12,11 @@ class Main extends Component {
   componentDidMount() {
     fetch(`https://www.omdbapi.com/?s=marvel&apikey=${API_KEY}`)
       .then((res) => res.json())
-      .then((res) => this.setState({ movies: res.Search, loading: false }));
+      .then((res) => this.setState({ movies: res.Search, loading: false }))
+      .catch(err => {
+        console.error(err)
+        this.setState({ loading: false })
+      });
   }
 
   searchMovie = (search, filter = "") => {
@@ -20,7 +24,11 @@ class Main extends Component {
     this.setState({ loading: true });
     fetch(`https://www.omdbapi.com/?s=${search}&type=${filter}&apikey=${API_KEY}`)
       .then((res) => res.json())
-      .then((res) => this.setState({ movies: res.Search, loading: false }));
+      .then((res) => this.setState({ movies: res.Search, loading: false }))
+      .catch(err => {
+        console.error(err)
+        this.setState({ loading: false })
+      });
   };
 
   render() {
